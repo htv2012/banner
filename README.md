@@ -15,4 +15,9 @@ Import it:
 import "github.com/htv2012/banner"
 ```
 
+Use it:
+
+```go
+banner.Banner("Chapter 1")
+```
 

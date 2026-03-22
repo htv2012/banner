@@ -9,15 +9,11 @@ Add to your project
 go get github.com/htv2012/banner
 ```
 
-Import it:
-
-```go
-import "github.com/htv2012/banner"
-```
-
 Use it:
 
 ```go
+import "github.com/htv2012/banner"
+
 banner.Banner("Chapter 1")
 ```
 

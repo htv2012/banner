@@ -1,7 +1,6 @@
-module banner
+package banner
 
-import  "fmt"
-
+import "fmt"
 
 // Banner displays text to stdout
 func Banner(text string) {
@@ -9,4 +8,3 @@ func Banner(text string) {
 	fmt.Printf("# %s", text)
 	fmt.Println("#")
 }
-

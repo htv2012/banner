@@ -8,21 +8,17 @@ import (
 	"testing"
 )
 
-func TestFbanner(t *testing.T) {
-	var buf bytes.Buffer
+func TestCreate(t *testing.T) {
 	input := "Test Message"
+	expected := "#\n# Test Message\n#\n"
+	actual := Create(input)
 
-	Fbanner(&buf, input)
-
-	got := buf.String()
-	want := "#\n# Test Message\n#\n"
-
-	if got != want {
-		t.Errorf("got %q, want %q", got, want)
+	if actual != expected {
+		t.Errorf("actual %q differ from expected %q", actual, expected)
 	}
 }
 
-func TestBanner(t *testing.T) {
+func TestPrint(t *testing.T) {
 	// 1. Save the original stdout and restore it when the test finishes
 	oldStdout := os.Stdout
 	defer func() { os.Stdout = oldStdout }()
@@ -33,7 +29,7 @@ func TestBanner(t *testing.T) {
 
 	// 3. Run the function
 	input := "Hello Go"
-	Banner(input)
+	Print(input)
 
 	// 4. Close the writer and read the captured output
 	w.Close()

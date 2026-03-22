@@ -2,18 +2,13 @@ package banner
 
 import (
 	"fmt"
-	"io"
 )
 
-func Fbanner(w io.Writer, text string) {
-	fmt.Fprintln(w, "#")
-	fmt.Fprintf(w, "# %s\n", text)
-	fmt.Fprintln(w, "#")
+func Create(text string) string {
+	return fmt.Sprintf("#\n# %s\n#\n", text)
 }
 
-// Banner displays text to stdout
-func Banner(text string) {
-	fmt.Println("#")
-	fmt.Printf("# %s", text)
-	fmt.Println("#")
+// Print displays text to stdout
+func Print(text string) {
+	fmt.Println(Create(text))
 }

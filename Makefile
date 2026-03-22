@@ -1,3 +1,9 @@
+.PHONY: test lint
+
+test: lint
+	go test -v ./...
+
 lint:
 	go vet ./...
 	go fmt ./...
+

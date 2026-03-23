@@ -6,7 +6,7 @@ import (
 
 // Create constructs a new string which can be printed as a banner
 func Create(text string) string {
-	return fmt.Sprintf("#\n# %s\n#\n", text)
+	return fmt.Sprintf("#\n# %s\n#", text)
 }
 
 // Print displays text to stdout

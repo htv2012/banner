@@ -10,6 +10,6 @@ func Create(text string) string {
 }
 
 // Print displays text to stdout
-func Print(text string) {
+func Banner(text string) {
 	fmt.Println(Create(text))
 }
